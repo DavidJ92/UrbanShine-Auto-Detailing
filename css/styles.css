@@ -1,0 +1,368 @@
+:root {
+    --primary-color: #1a1a2e; /* Green color */
+    --secondary-color: #503d04; /* Yellow color */
+    --text-color: #333; /* Dark text color */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes up at least the full height of the viewport */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9; /* Light gray background */
+    color: var(--text-color);
+}
+
+header, footer {
+    background-color: var(--primary-color); /* Use primary color */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Additional styling for header */
+header p {
+    font-size: 1.2em; /* Increase font size */
+    font-style: italic; /* Make it italic */
+    color: #ccc; /* Light gray color */
+    margin-bottom: 20px; /* Add some bottom margin */
+}
+
+header h1 {
+    margin-top: 100px; /* Adjust as needed */
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
+    position: relative; /* Position relative for absolute positioning of PRO */
+}
+
+header h1::after {
+    content: "PRO"; /* Add PRO text after the h1 */
+    position: absolute; /* Position absolute */
+    top: 85%; /* Align it vertically */
+    left: 50%; /* Align it horizontally */
+    transform: translate(-50%, -50%); /* Center it */
+    font-size: 0.8em; /* Adjust font size */
+    color: rgba(255, 255, 255, 0.3); /* Translucent white color */
+}
+
+.menu-toggle {
+    display: none; /* Hide the menu toggle button by default */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center align horizontally */
+}
+
+nav ul li {
+    /* display: inline; */ /* Remove this line */
+    margin-right: 20px;
+    display: inline-block; /* Add this line */
+}
+
+nav ul li a {
+    color: #fff; /* Change text color to white */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background-color and text color */
+    padding: 10px 20px; /* Add padding to make them look like buttons */
+    border-radius: 5px; /* Add border radius for a sleek look */
+    background-color: var(--primary-color); /* Use secondary color for background */
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #503d04; /* Darken the background color on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+main {
+    flex: 1; /* Allow the main content to grow and fill available space */
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Add border radius for a sleek look */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Scale up image on hover */
+}
+
+/* Car detailing image as background */
+header {
+    background-image: url(/cardetailbackground.jpeg); /* Use src for local image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Additional styling for header */
+header h1 {
+    margin-top: 100px; /* Adjust as needed */
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
+}
+
+/* Styling for service headings */
+section#services ul li h3 {
+    color: var(--secondary-color); /* Set color to secondary color */
+}
+
+section#services p {
+    font-size: 20px; /* Increase font size */
+    line-height: 1.6; /* Increase line height for better readability */
+    margin-bottom: 20px; /* Add margin at the bottom */
+}
+
+section#services h3 {
+    margin-bottom: 10px; /* Add margin at the bottom */
+    font-size: 22px;
+}
+
+/* Styling for service images */
+section#services ul li img {
+    display: block;
+    margin: 0 auto 20px; /* Center the images and add margin at the bottom */
+    border-radius: 10px; /* Add border radius for a sleek look */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+    max-width: 100%; /* Set maximum width */
+}
+
+section#services ul li img:hover {
+    transform: scale(1.05); /* Scale up image on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+}
+
+/* Styling for About Us section */
+section#about {
+    text-align: center; /* Center align the content */
+}
+
+/* Styling for the logo */
+section#about img {
+    width: 150px; /* Set width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Apply border-radius to make it round */
+    margin-bottom: 20px; /* Add margin at the bottom */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+/* Styling for the text */
+section#about p {
+    font-size: 22px; /* Increase font size */
+    line-height: 1.6; /* Increase line height for better readability */
+    margin-bottom: 20px; /* Add margin at the bottom */
+}
+
+/* Styling for gallery images */
+section#gallery img {
+    display: block;
+    margin: 0 auto 20px; /* Center the images and add margin at the bottom */
+    width: 80%; /* Set width to match service images */
+    max-width: 500px; /* Set maximum width */
+    border-radius: 10px; /* Add border radius for a sleek look */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+}
+
+section#gallery {
+    margin-bottom: 80px; /* Add some bottom margin to push it above the footer */
+}
+
+section#gallery p {
+    font-size: 22px; /* Increase font size */
+}
+
+section#gallery img:hover {
+    transform: scale(1.05); /* Scale up image on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+}
+
+/* Adjust footer to stay at the bottom */
+footer {
+    position: relative; /* Change from fixed to relative */
+    width: 100%;
+    clear: both; /* Ensure content doesn't float over the footer */
+}
+
+
+/* Styling for Contact Us section */
+section#contact {
+    text-align: center; /* Center align the content */
+}
+
+/* Styling for contact information */
+section#contact p {
+    font-size: 24px; /* Increase font size */
+    line-height: 1.6; /* Increase line height for better readability */
+    margin-bottom: 10px; /* Add margin at the bottom */
+}
+
+/* Styling for the form */
+section#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for form input */
+section#contact form input[type="submit"] {
+    padding: 12px 24px; /* Add padding */
+    font-size: 16px; /* Increase font size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Apply border-radius */
+    background-color: var(--secondary-color); /* Use secondary color for background */
+    color: #fff; /* Text color */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Styling for form input on hover */
+section#contact form input[type="submit"]:hover {
+    background-color: var(--primary-color); /* Change background */
+}
+
+
+/* Styling for pricing section */
+section#pricing {
+    text-align: center; /* Center align the content */
+    background-color: #f5f5f5; /* Light gray background */
+    padding: 50px 0; /* Add padding */
+}
+
+/* Styling for pricing text */
+section#pricing p {
+    font-size: 1.5em; /* Increase font size */
+    margin-bottom: 20px; /* Add bottom margin */
+}
+
+/* Styling for pricing list items */
+section#pricing ul li {
+    font-size: 1.3em; /* Increase font size */
+    margin-bottom: 10px; /* Add bottom margin */
+}
+
+/* Styling for pricing list item labels */
+section#pricing ul li strong {
+    font-weight: bold; /* Make text bold */
+}
+
+/* Styling for pricing note */
+section#pricing p.note {
+    font-size: 1.4em; /* Increase font size */
+    margin-top: 20px; /* Add top margin */
+}
+
+
+/* Add this CSS code to your existing stylesheet */
+
+.social-media {
+    margin-top: 20px; /* Add some top margin */
+}
+
+.social-media a {
+    display: inline-block;
+    margin-right: 10px; /* Add some right margin between icons */
+}
+
+.social-media a i {
+    font-size: 24px; /* Increase the icon size */
+    transition: transform 0.3s ease; /* Smooth transition for icon size */
+}
+
+.social-media a i:hover {
+    transform: scale(1.2); /* Scale up icon size on hover */
+}
+
+/* Mobile-first approach */
+
+/* Styling for Contact Us section */
+section#contact p {
+    font-size: 20px; /* Decrease font size for smaller screens */
+}
+
+/* Styling for form input */
+section#contact form input[type="submit"] {
+    padding: 10px 20px; /* Decrease padding */
+    font-size: 14px; /* Decrease font size */
+}
+
+/* Styling for pricing section */
+section#pricing p {
+    font-size: 1.2em; /* Decrease font size */
+}
+
+/* Styling for pricing list items */
+section#pricing ul li {
+    font-size: 1em; /* Decrease font size */
+}
+
+/* Styling for pricing list item labels */
+section#pricing ul li strong {
+    font-weight: bold; /* Make text bold */
+}
+
+/* Styling for pricing note */
+section#pricing p.note {
+    font-size: 1.1em; /* Decrease font size */
+}
+
+/* Media query for smaller screen sizes */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show the menu toggle button for smaller screens */
+    }
+
+    nav ul {
+        display: none; /* Hide the navigation menu by default on smaller screens */
+    }
+
+    nav ul.show {
+        display: block; /* Show the navigation menu when the menu toggle button is clicked */
+    }
+}
+
+/* Media queries for larger screens */
+
+@media screen and (min-width: 768px) {
+    /* Styling for Contact Us section */
+    section#contact p {
+        font-size: 24px; /* Restore font size */
+    }
+
+    /* Styling for form input */
+    section#contact form input[type="submit"] {
+        padding: 12px 24px; /* Restore padding */
+        font-size: 16px; /* Restore font size */
+    }
+
+    /* Styling for pricing section */
+    section#pricing p {
+        font-size: 1.5em; /* Increase font size */
+    }
+
+    /* Styling for pricing list items */
+    section#pricing ul li {
+        font-size: 1.3em; /* Increase font size */
+    }
+
+    /* Styling for pricing note */
+    section#pricing p.note {
+        font-size: 1.4em; /* Increase font size */
+    }
+}

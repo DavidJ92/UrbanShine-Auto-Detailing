@@ -105,7 +105,7 @@ section {
 
 /* Car detailing image as background */
 header {
-    background-image: url(/cardetailbackground.jpeg); /* Use src for local image */
+    background-image: url(../img/cardetailbackground.jpeg); /* Use src for local image */
     background-size: cover;
     background-position: center;
 }

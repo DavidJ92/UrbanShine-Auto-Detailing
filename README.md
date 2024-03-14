@@ -25,7 +25,7 @@ Our services include:
 
 ## Pricing
 
-Our pricing varies based on the package chosen and the condition of the vehicle. Please refer to our [Pricing](#pricing) section in the app for details.
+Our pricing varies based on the package chosen and the condition of the vehicle. Please refer to our pricing section in the app for details. [https://davidj92.github.io/UrbanShinePRO-Auto-Detailing/](#pricing) 
 
 ## Gallery
 
